@@ -6,12 +6,12 @@ import ManageDevices from "../components/ManageDevices";
 import VideoController from "../components/VideoController";
 import Vidoe from "../components/Vidoe";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://robos.upkeytech.com/");
 
 const Home = () => {
-
+ 
   useEffect(() => {
-    socket.on("receive_message", (data) => {
+    socket.on("message", (data) => {
      alert(data.message)
     });
   }, [socket]);
